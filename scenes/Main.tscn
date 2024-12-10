@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbyacqg8ky0x8"]
+
+[ext_resource type="PackedScene" uid="uid://drixe4i2uookw" path="res://scenes/level_1.tscn" id="1_hs86p"]
+[ext_resource type="PackedScene" uid="uid://3rt63scuqj26" path="res://scenes/player.tscn" id="2_6pl8c"]
+[ext_resource type="PackedScene" uid="uid://diykerbmk8i62" path="res://scenes/enemy.tscn" id="3_sdjv7"]
+[ext_resource type="PackedScene" uid="uid://bu5vvgsri8vkd" path="res://scenes/power_up.tscn" id="4_65j83"]
+[ext_resource type="PackedScene" uid="uid://dusnlheys2ut5" path="res://scenes/gem.tscn" id="5_xjxks"]
+
+[node name="Main" type="Node"]
+
+[node name="lvl1" type="Node2D" parent="."]
+
+[node name="level1" parent="lvl1" instance=ExtResource("1_hs86p")]
+
+[node name="Player" parent="." instance=ExtResource("2_6pl8c")]
+position = Vector2(100, -50)
+
+[node name="enemy" parent="." instance=ExtResource("3_sdjv7")]
+position = Vector2(617, 155)
+
+[node name="enemy2" parent="." instance=ExtResource("3_sdjv7")]
+position = Vector2(1017, 89)
+
+[node name="enemy3" parent="." instance=ExtResource("3_sdjv7")]
+position = Vector2(1399, 125)
+
+[node name="enemy4" parent="." instance=ExtResource("3_sdjv7")]
+position = Vector2(641, -71)
+
+[node name="gem" parent="." instance=ExtResource("5_xjxks")]
+position = Vector2(720, 163)
+
+[node name="PowerUp" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(537, 90)
+
+[node name="PowerUp2" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(757, 88)
+
+[node name="PowerUp3" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(1076, 155)
+
+[node name="PowerUp4" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(1274, 52)
+
+[node name="PowerUp5" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(936, 152)
+
+[node name="PowerUp6" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(938, 19)
+
+[node name="PowerUp7" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(1842, 115)
+
+[node name="PowerUp8" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(1844, 17)
+
+[node name="PowerUp9" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(836, -177)
+
+[node name="PowerUp10" parent="." instance=ExtResource("4_65j83")]
+position = Vector2(1246, -151)
+
+[node name="gem2" parent="." instance=ExtResource("5_xjxks")]
+position = Vector2(1846, 197)
+
+[node name="gem3" parent="." instance=ExtResource("5_xjxks")]
+position = Vector2(1825, -164)
+
+[node name="gem4" parent="." instance=ExtResource("5_xjxks")]
+position = Vector2(1429, -199)
+
+[node name="gem5" parent="." instance=ExtResource("5_xjxks")]
+position = Vector2(611, -223)
+
+[node name="gem6" parent="." instance=ExtResource("5_xjxks")]
+position = Vector2(1017, 33)

@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://bu5vvgsri8vkd"]
+
+[ext_resource type="Texture2D" uid="uid://dy0xe7m6qsi2k" path="res://Animated Orb/Spnning Orb/Blue/frame 1.png" id="1_qy8x5"]
+[ext_resource type="Script" path="res://scripts/power_up.gd" id="1_wi3p6"]
+[ext_resource type="Texture2D" uid="uid://2mpvk68of8ec" path="res://Animated Orb/Spnning Orb/Blue/frame 2.png" id="2_pwmct"]
+[ext_resource type="Texture2D" uid="uid://cxj75dabtxr6y" path="res://Animated Orb/Spnning Orb/Blue/frame 3.png" id="3_i6onv"]
+[ext_resource type="Texture2D" uid="uid://bqr1427aipmje" path="res://Animated Orb/Spnning Orb/Blue/frame 4.png" id="4_mjcwj"]
+[ext_resource type="Texture2D" uid="uid://cbdnd14aqwmky" path="res://Animated Orb/Spnning Orb/Blue/frame 5.png" id="5_vi0ud"]
+[ext_resource type="Texture2D" uid="uid://ckdpvyerualcb" path="res://Animated Orb/Spnning Orb/Blue/frame 6.png" id="6_8bvs1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jctqm"]
+radius = 8.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5c7hw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qy8x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pwmct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i6onv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mjcwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vi0ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8bvs1")
+}],
+"loop": true,
+"name": &"blue_orb",
+"speed": 5.0
+}]
+
+[node name="PowerUp" type="Area2D"]
+position = Vector2(-2, -45)
+collision_layer = 8
+script = ExtResource("1_wi3p6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41, 86)
+shape = SubResource("CircleShape2D_jctqm")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(40, 85)
+scale = Vector2(0.0438351, 0.0430086)
+sprite_frames = SubResource("SpriteFrames_5c7hw")
+animation = &"blue_orb"
+autoplay = "blue_orb"
+frame_progress = 0.694903
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
